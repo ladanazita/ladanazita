@@ -1,0 +1,56 @@
+[
+{
+  "id": "visualyou",
+  "image":"visualyou.png",
+  "featured":true,
+  "completion":"done",
+  "type": "Ruby on Rails",
+  "participation": "solo",
+  "title":"Visual You",
+  "category": "web",
+  "date": 2015,
+  "description": "First Ruby on Rails app.",
+  "link": {"href":"http://visualyou.herokuapp.com", "value":"Visual You Website"}
+},
+{
+  "id":"swaynews",
+  "image":"swaynews.png",
+  "featured": true,
+  "completion": "done",
+  "type": "Ruby on Rails",
+  "participation": "project manager, contributor",
+  "title": "Sway News",
+  "category": "web",
+  "date": 2015,
+  "description": "Ruby on Rails app consuming API from Twitter and Youtube, and our own.",
+  "link": {"href": "http://swaynews.herokuapp.com", "value":"Sway News website"}
+},
+{
+  "id":"exploretate",
+  "image":"exploretate.png",
+  "featured":true,
+  "completion": "done",
+  "type":"MEANstack",
+  "participation": "solo",
+  "title": "Explore Tate",
+  "category": "web",
+  "date": 2015,
+  "description": "Explore the Tate Museum's meta data",
+  "link":{"href":"https://exploretate.herokuapp.com", "value":"Explore the Tate"}
+},
+{
+  "id":"tamagochi",
+  "image":"",
+  "featured":true,
+  "completion": "working on it",
+  "type": "javascript",
+  "participation":"open",
+  "title": "Tamagochi",
+  "category":"web",
+  "date":2015,
+  "description": "Throw back to my younger years",
+  "link":{}
+}
+
+
+]
