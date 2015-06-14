@@ -1,8 +1,11 @@
 'use strict';
 
-var myApp= angular.module('myApp',[]);
+angular
+  .module('myApp')
+  .controller('MainController', MainController);
 
-var mainController= angular.controller('mainController',function($scope){
-  var self = this;
+  MainController.$inject = ['$http', '$state'];
 
-});
+  function MainController($http, $state){
+    var self=this;
+  }

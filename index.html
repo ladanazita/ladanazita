@@ -7,7 +7,17 @@
   <meta name="description" conent='personal works'>
   <meta name="author" conent='Ladan Azita'>
 
-  <title> Ladan Azita </title>
+  <!-- sweet, sweet angular -->
+  <script src="lib/angular.js"></script>
+  <script src="lib/angular-ui-router.js"></script>
+  <script src="lib/angular-resource.js"></script>
+  <!-- <script src="lib/angular-animate.js"></script> -->
+  <script src="main.js"></script>
+  <script src="js/mainController.js"></script>
+  <script src="js/routing.js"></script>
+  <!-- <script src="js/portfolioController.js"></script> -->
+
+  <title ng-bind="title"></title>
 
   <!-- stylesheets -->
   <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -15,14 +25,16 @@
   <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
 
 </head>
-<body ng-controller="mainController as main">
+<body ng-controller="mainController">
 
   <div class="splash-container">
     <div class="splash">
       <h1 class="splash-head">Ladan Azita Nasserian</h1>
       <p class ="splash-subhead">
         Choose:
-        <a href="About"
+        <a ui-sref="About">About Me</a>
+        <a ui-sref="About">Featured Projects</a>
+        <a ui-sref="About">Contact</a>
       </p>
     </div>
   </div>
@@ -30,21 +42,12 @@
   <div class="content-wrapper">
     <div class="wrapper">
       <header>
-          <div ng-view></div>
+          <div ui-view></div>
       </header>
     </div>
   </div>
 
-  <script src="lib/underscore-min.js"></script>
-  <script src="lib/angular.js"></script>
-  <script src="lib/angular-resource.js"></script>
-  <script src="lib/angular-route.js"></script>
-  <script src="lib/angular-animate.js"></script>
-  <script src="main.js"></script>
-<!--   <script src="js/services.js"></script> -->
-  <script src="js/mainController.js"></script>
-<!--   <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
- -->
+
+
 </body>
 </html>
