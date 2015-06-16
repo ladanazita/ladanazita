@@ -1,4 +1,6 @@
 var Work = require('../models/work').Work;
+var data = require('../seeds/data');
+var config= require('../config');
 
 exports.addWork = function(work, next){
   var newWork= new Work({

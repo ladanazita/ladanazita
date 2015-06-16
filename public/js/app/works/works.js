@@ -5,14 +5,17 @@
     .module('app')
     .controller('WorksController', WorksController);
 
-    WorksController.$inject = ['$http'];
+    WorksController.$inject = ['$scope','$http'];
 
-    function WorksController($http){
+    function WorksController($scope, $http){
+      console.log('controller loaded');
       var vm =this;
 
-      $http.get('/seeds/data.json')
+      $scope.works=[];
+
+      $http.get('/seeds/data')
       .then(function(response){
-        vm.works = response.data
+        vm.works = result.data
       },
       function(reason){
         console.log(reason);

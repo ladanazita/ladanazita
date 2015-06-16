@@ -26,7 +26,7 @@ workSchema.path('id').validate(function(value, next){
   // to see if the work exists
   next(!work);
   });
-}, "That work already exists");
+}, "That project already exists");
 
 var Work = mongoose.model('Work', workSchema);
 
