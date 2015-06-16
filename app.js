@@ -1,3 +1,4 @@
+require('dotenv').load();
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
@@ -9,7 +10,14 @@ var config = require('./config');
 var routes = require('./routes/index');
 var works = require('./routes/works');
 
-mongoose.connect(config.mongoUri);
+var mongoDB = mongoose.connect(process.env.MONGOLAB_URI).connection;
+mongoDB.on('error', function(err){
+    console.log('【・ヘ・?】 Connection error', err);
+  });
+mongoDB.once('open', function(){
+  console.log(' ＼（＾▽＾）／ Its magical here');
+});
+
 
 var app = express();
 
@@ -24,7 +32,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/', works);
+app.use('/works', works);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -4,29 +4,26 @@ var work = require('../models/work');
 var workService = require('../services/work-service');
 
 // GET work listings
+router.get('/create', function(req,res,next){
+  var vm={
+    title: "Add a project"
+  };
+  res.render('works/index', vm);
+});
 
-
-
-// router.get('/create', function(req,res,next){
-//   var vm={
-//     title: "Add a project"
-//   };
-//   res.render('works/index', vm);
-// });
-
-// router.post('/create', function(req, res, next){
-//   workService.addWork(req.body, function(err){
-//     if(err){
-//       console.log(err);
-//       var vm={
-//         title: "Add a project",
-//         input: req.body,
-//         error: err
-//       }
-//       res.redirect('/works');
-//     }
-//   });
-// });
+router.post('/create', function(req, res, next){
+  workService.addWork(req.body, function(err){
+    if(err){
+      console.log(err);
+      var vm={
+        title: "Add a project",
+        input: req.body,
+        error: err
+      }
+      res.redirect('/works');
+    }
+  });
+});
 
 router.get('/featured', function(req, res, next) {
   workService.findWork(function(err, works) {
