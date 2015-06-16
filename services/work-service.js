@@ -2,14 +2,14 @@ var Work = require('../models/work').Work;
 
 exports.addWork = function(work, next){
   var newWork= new Work({
-    id: work.id,
+    id: work.id.toLowerCase(),
     image: work.image,
     featured: work.featured,
-    completion: work.completion,
-    type: work.type,
-    participation: work.participation,
-    title: work.title,
-    category: work.category,
+    completion: work.completion.toLowerCase(),
+    type: work.type.toLowerCase(),
+    participation: work.participation.toLowerCase(),
+    title: work.title.toLowerCase(),
+    category: work.category.toLowerCase(),
     date: work.date,
     description: work.description,
     link: work.link
@@ -21,4 +21,10 @@ exports.addWork = function(work, next){
     }
     next(null);
   });
+};
+
+exports.findWork = function(featured, next){
+  Work.findOne({id:id.toLowerCase()}, function(err, work){
+    next(err, work);
+  })
 };

@@ -6,15 +6,15 @@ router.get('/', function(req, res, next) {
   res.render('welcome', { title: 'Welcome' });
 });
 
-router.get('/', function(req, res, next) {
+router.get('/about', function(req, res, next) {
   res.render('about', { title: 'About me' });
 });
 
-router.get('/', function(req, res, next) {
+router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact me' });
 });
 
-router.get('/', function(req, res, next) {
+router.get('/featured', function(req, res, next) {
   res.render('featured', { title: 'Featured Works' });
 });
 
