@@ -55,6 +55,9 @@ h6,
 label {
     color: #34495e;
 }
+
+/*-------------------------------- */
+
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
@@ -83,7 +86,7 @@ label {
     text-transform: uppercase;
 }
 
-/* This is the main heading that appears on the blue section */
+/* This is the main heading that appears on the pink section */
 .splash-head {
     font-size: 20px;
     font-weight: bold;
@@ -94,6 +97,8 @@ label {
     border-radius: 5px;
     line-height: 1em;
 }
+
+/*-------------------------------- */
 
 .summary{
   padding: 25px 80px 25px 25px;
@@ -122,10 +127,9 @@ label {
   width: 940px;
   padding-top: 2em;
 }
-/*
- * -- PURE BUTTON STYLES --
- * I want my pure-button elements to look a little different
- */
+
+/* -- PURE BUTTON STYLES --*/
+
 .pure-button {
     background-color: #1f8dd6;
     color: white;
@@ -139,6 +143,7 @@ a.pure-button-primary {
     border-radius: 5px;
     font-size: 120%;
 }
+
 /*
  * -- CONTENT STYLES --
  * This represents the content area (everything below the pink section)
@@ -176,7 +181,7 @@ a.pure-button-primary {
 
 /* This is the class used for the dark-background areas. */
 .ribbon {
-    background: #2d3e50;
+    background: #63c5ae;
     color: #aaa;
 }
 
@@ -278,7 +283,8 @@ a.pure-button-primary {
 
 /*----------------SOCIAL----------------*/
 .social {
-    margin-left: 0;
+    margin-left: 34%;
+
 }
 .social li {
     margin: 2px;
@@ -286,7 +292,6 @@ a.pure-button-primary {
   float: left;
 }
 
-/*--------- Social Media icons by http://icondock.com----------*/
 .social-icon {
   direction: ltr;
     text-indent: -9999px;
@@ -297,12 +302,12 @@ a.pure-button-primary {
     background: no-repeat left top transparent;
 }
 
-.social-icon.twitter { background-image: url("../images/icons/twitter.icns"); }
-.social-icon.tumblr { background-image: url("../images/icons/tumblr.icns"); }
-.social-icon.linkedin { background-image: url("../images/icons/linkedin.icns"); }
-.social-icon.github{ background-image: url("../images/icons/github.icns"); }
-.social-icon.youtube { background-image: url("../images/icons/youtube.icns"); }
-.social-icon.artsy { background-image: url("../images/icons/artsy.icns"); }
-.social-icon.medium { background-image: url("../images/icons/medium.icns"); }
-.social-icon.behance { background-image: url("../images/icons/behance.icns"); }
-.social-icon.quora { background-image: url("../images/icons/quora.icns"); }
+.social-icon.twitter { background-image: url("../images/icons/twitter.png"); }
+.social-icon.tumblr { background-image: url("../images/icons/tumblr.png"); }
+.social-icon.linkedin { background-image: url("../images/icons/linkedin.png"); }
+.social-icon.github{ background-image: url("../images/icons/github.png"); }
+.social-icon.youtube { background-image: url("../images/icons/youtube.png"); }
+.social-icon.artsy { background-image: url("../images/icons/artsy.png"); }
+.social-icon.medium { background-image: url("../images/icons/medium.png"); }
+.social-icon.behance { background-image: url("../images/icons/behance.png"); }
+.social-icon.quora { background-image: url("../images/icons/quora.png"); }
