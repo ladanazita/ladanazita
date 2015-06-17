@@ -38,8 +38,10 @@ h1 {
     box-sizing: border-box;
 }
 
+
+/*---------------GENERAL----------------- */
+
 @import url(http://fonts.googleapis.com/css?family=Nunito:300);
-/*-------------------------------- */
 
 body{
   font-family: 'Nunito', sans-serif;
@@ -58,7 +60,31 @@ label {
     color: #34495e;
 }
 
-/*-------------------------------- */
+/* unvisited link */
+a:link {
+    color: #577d87;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #577d87;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color:  #bfffcb;
+    text-decoration: none;
+}
+
+/*---------------SPLASH----------------- */
 
 .pure-img-responsive {
     max-width: 100%;
@@ -100,37 +126,8 @@ label {
     line-height: 1em;
 }
 
-/*-------------------------------- */
 
-.summary{
-  padding: 25px 80px 25px 25px;
-  font-size: 14px;
-  border: solid black;
-  margin:0px;
-}
-
-#websites{
-  padding: 25px 80px 25px 25px;
-  float: right;
-  font-size: 200%;
-}
-#websites ul{
-  display:inline;
-  padding-left:0;
-  margin-left:0;
-}
-
-#websites ul li{
-  display:inline;
-  padding-left: 0.5em;
-}
-.wrapper{
-  margin: 0 auto;
-  width: 940px;
-  padding-top: 2em;
-}
-
-/* -- PURE BUTTON STYLES --*/
+/* -- BUTTON STYLES --*/
 
 .pure-button {
     background-color: #1f8dd6;
@@ -146,10 +143,7 @@ a.pure-button-primary {
     font-size: 120%;
 }
 
-/*
- * -- CONTENT STYLES --
- * This represents the content area (everything below the pink section)
- */
+/* ---- CONTENT STYLES ---*/
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
@@ -165,12 +159,14 @@ a.pure-button-primary {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin: 2em 0 1em;
+    margin: 0em 0 1em;
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
 .content-head-ribbon {
     color: white;
+    text-align: center;
+    font-size: 2em;
 }
 
 /* This is the class used for the content sub-headers (<h3>) */
@@ -191,13 +187,22 @@ a.pure-button-primary {
 .footer {
     background: #111;
 }
-/* --------- PURE FORM STYLES -------*/
 
+/* ----------- ABOUT ME -------*/
+.summary{
+  padding: 25px 80px 25px 25px;
+  font-size: 14px;
+  color: white;
+  border: solid white;
+  margin:0px;
+  text-align: center;
+}
 
+/* ---------  FORM STYLES -------*/
 
 .feedback-input {
   color:#3c3c3c;
-  font-family: 'Nunito', Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight:500;
   font-size: 18px;
   border-radius: 0;
@@ -227,7 +232,7 @@ a.pure-button-primary {
   border:#30aed6 solid 3px;
 }
 
-/* Icons ---------------------------------- */
+/* ------------------- FORM ICONS ---------------------------------- */
 #name{
   background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
   background-size: 30px 30px;
@@ -277,7 +282,7 @@ input:focus, textarea:focus {
 }
 
 #button-blue{
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: 'Nunito',sans-serif;
   float:left;
   width: 100%;
   border: #fbfbfb solid 4px;
@@ -381,10 +386,7 @@ input:focus, textarea:focus {
     text-align: center;
 }
 /*
- * -- DESKTOP (AND UP) MEDIA QUERIES --
- * On desktops and other large devices, we want to over-ride some
- * of the mobile and tablet styles.
- */
+ * -- DESKTOP (AND UP) MEDIA QUERIES --*/
 @media (min-width: 78em) {
     /* We increase the header font size even more */
     .splash-head {
@@ -422,3 +424,29 @@ input:focus, textarea:focus {
 .social-icon.medium { background-image: url("../images/icons/medium.png"); }
 .social-icon.behance { background-image: url("../images/icons/behance.png"); }
 .social-icon.quora { background-image: url("../images/icons/quora.png"); }
+
+
+/*--------------SAVE FOR LATER------------------ */
+
+
+
+/*#websites{
+  padding: 25px 80px 25px 25px;
+  float: right;
+  font-size: 200%;
+}
+#websites ul{
+  display:inline;
+  padding-left:0;
+  margin-left:0;
+}
+
+#websites ul li{
+  display:inline;
+  padding-left: 0.5em;
+}
+.wrapper{
+  margin: 0 auto;
+  width: 940px;
+  padding-top: 2em;
+}*/
