@@ -1,34 +1,29 @@
  <div class="content">
-        <h2 class="content-head is-center">Ask me anything</h2>
-
+    <h2 class="content-head is-center">Ask me anything</h2>
         <div class="pure-g">
             <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-                <form class="pure-form pure-form-stacked">
-                    <fieldset>
-
-                        <label for="name">Your Name</label>
-                        <input id="name" type="text" placeholder="Your Name">
-
-
-                        <label for="email">Your Email</label>
-                        <input id="email" type="email" placeholder="Your Email">
-
-                        <button type="submit" class="pure-button">Sign Up</button>
-                    </fieldset>
-                </form>
-            </div>
-
-            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-                <h4>Contact me</h4>
-                <p>
-                    Feel free to reach out and tell me if my projects suck.
-                </p>
-
-                <h4>More Information</h4>
-                <p>
-                    I also am on too many websites! <a href "links"> Check me out</a>
-                </p>
+                <div id="form-main">
+                    <div id="form-div">
+                        <form class="form" id="form1">
+                            <p class="name">
+                                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+                            </p>
+                            <p class="email">
+                                <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+                            </p>
+                            <p class="text">
+                                <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+                            </p>
+                            <div class="submit">
+                                <input type="submit" value="SEND" id="button-blue"/>
+                                <div class="ease"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
+</div>
 
-    </div>
+
+
