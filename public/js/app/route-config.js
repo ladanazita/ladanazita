@@ -15,7 +15,7 @@
         templateUrl : '/js/app/works/works.html',
         controller : 'WorksController',
         controllerAs: 'vm'
-    });
+    })
       .when('home',{
         url: '/',
         title: 'Ladan Azita',

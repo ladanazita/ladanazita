@@ -8,16 +8,20 @@
   <meta name="description" content='personal works'>
   <meta name="author" content='Ladan Azita'>
 
-  <!-- stylesheets -->
+  <!-- STYLER -->
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
-  {{!-- <link rel="stylesheet" type="text/css" href="stylesheets/animations.css" /> --}}
-  {{!-- <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'> --}}
-  <script type='text/javascript' src='/js/jquery.js'></script>
-  <script type='text/javascript' src='/js/wp-backgrounds.js'></script>
+  <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+
+  {{!-- ANGULAR --}}
+  <script src="/bower/angular/angular.min.js"></script>
+  <script src="/bower/angular-route/angular-route.min.js"></script>
+  <script src="/js/app/app.js"></script>
+  <script src="/js/app/route-config.js"></script>
+  <script src="/js/app/works/works.js"></script>
 </head>
 
 <body>
-
+  {{!-- FIXED SPLASH PAGE --}}
   <div class="splash-container">
     <div class="splash">
       <h1 class="splash-head">Ladan Azita Nasserian</h1>
@@ -29,7 +33,8 @@
     </div>
   </div>
 
-<div class="content-wrapper">
+  {{!-- CLICKED CONTENT --}}
+  <div class="content-wrapper">
     <div class="content">
         <h2 class="content-head is-center"></h2>
         <div class="pure-g">
@@ -44,7 +49,7 @@
             </div>
         </div>
     </div>
-
+    {{!-- SOCIAL --}}
     <div class="ribbon l-box-lrg pure-g">
       <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
@@ -58,13 +63,12 @@
             <li><a href="http://artsy.net/ladan-nasserian" class="social-icon artsy">Artsy</a></li>
             <li><a href="http://behance.net/ladanazita" class="social-icon behance">Behance</a></li>
             <li><a href="http://quora.com/Ladan-Azita" class="social-icon quora">Quora Digest</a></li>
+            <li><a href="http://careers.stackoverflow.com/ladanazita" class="social-icon stack">Stack Overflow</a></li>
           </ul>
         </div>
       </div>
     </div>
-
-
-
+    {{!-- SOURCE CODE / FOOTER --}}
     <div class="footer l-box is-center">
       View Source Code<a href='http://github.com/ladanazita/ladanazita'> Here </a>
     </div>

@@ -10,4 +10,5 @@ angular
   function getData($resource){
     return $resource('data.json', {},{
       query: {method: 'GET', isArray:true}
-    });
+    })
+  }
