@@ -5,47 +5,34 @@
     .module('app')
     .config(config);
 
-  config.$inject = ['$routeProvider'];
+  config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-  function config($routeProvider){
-    $routeProvider
-      .when('featured',{
-        url: '/featured',
-        title: 'featured',
-        templateUrl : '/js/app/works/works.html',
-        controller : 'WorksController',
-        controllerAs: 'vm'
-    })
-      .when('home',{
-        url: '/',
+  function config($stateProvider, $urlRouterProvider){
+
+    $stateProvider
+      .state('home',{
+        url: '/home',
         title: 'Ladan Azita',
-        templateUrl : 'views/index.hbs',
-        controller : 'mainController',
-        controllerAs: 'main'
+        templateUrl: 'templates/index.hbs'
     })
-      .when('about',{
+      .state('about',{
         url: '/about',
         title: 'who is she',
-        templateUrl : 'templates/about.hbs',
-        controller : 'mainController',
-        controllerAs: 'main'
+        templateUrl : 'templates/about.hbs'
     })
-
-      .when('contact',{
+      .state('featured',{
+        url: '/featured',
+        title: 'featured',
+        templateUrl : 'templates/featured.hbs',
+        controller : 'WorksController',
+        controllerAs: 'works'
+    })
+      .state('contact',{
         url:'/contact',
         title:'talk to me',
-        templateUrl : 'templates/contact.hbs',
-        controller : 'mainController',
-        controllerAs: 'main'
-    })
-
-      .when('links',{
-        url:'/links',
-        title:'Check me out',
-        templateUrl: 'templates/links.hbs',
-        controller : 'mainController',
-        controllerAs: 'main'
-      });
+        templateUrl : 'templates/contact.hbs'
+    });
+      $urlRouterProvider.otherwise("/home");
   }
 })();
 

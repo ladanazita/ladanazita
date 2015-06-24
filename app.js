@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 
 var config = require('./config');
 var routes = require('./routes/index');
-var works = require('./routes/works');
+var works = require('./routes/api/v1/works.js');
 
 var mongoDB = mongoose.connect(process.env.MONGOLAB_URI).connection;
 mongoDB.on('error', function(err){
@@ -32,7 +32,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/works', works);
+app.use('/', works);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

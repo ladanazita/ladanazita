@@ -1,11 +1,8 @@
 'user strict';
 
 angular
-  .module('app', ['ngRoute', 'ngResource'])
-  .factory('Work', getData)
-  .config(['$routeProvider', function($routeProvider){
-    $routeProvider.otherwise({redirectTo: '/'})
-  }]);
+  .module('app', ['ui.router', 'ngResource'])
+  .factory('Work', getData);
 
   function getData($resource){
     return $resource('data.json', {},{

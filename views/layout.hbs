@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' ng-app="app">
 <head>
 
   <meta charset='utf-8'>
@@ -8,13 +8,16 @@
   <meta name="description" content='personal works'>
   <meta name="author" content='Ladan Azita'>
 
-  <!-- STYLER -->
+  {{!---- STYLE ----}}
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
   <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
 
   {{!-- ANGULAR --}}
-  <script src="/bower/angular/angular.min.js"></script>
-  <script src="/bower/angular-route/angular-route.min.js"></script>
+  <script src="/bower/angular/angular.js"></script>
+  <script src="/bower/ui-router/release/angular-ui-router.js"></script>
+  <script src="/bower/angular-resource/angular-resource.js"></script>
+
+  {{!-- JS --}}
   <script src="/js/app/app.js"></script>
   <script src="/js/app/route-config.js"></script>
   <script src="/js/app/works/works.js"></script>
@@ -25,11 +28,11 @@
   <div class="splash-container">
     <div class="splash">
       <h1 class="splash-head">Ladan Azita Nasserian</h1>
-      <p class ="splash-subhead">
-        <a href="/about">About Me</a>
-        <a href="/featured">Featured Projects</a>
-        <a href="/contact">Contact</a>
-      </p>
+      <ul class ="splash-subhead">
+        <li><a ui-sref="about">About Me</a></li>
+        <li><a ui-sref="featured">Featured Projects</a></li>
+        <li><a ui-sref="contact">Contact</a></li>
+      </ul>
     </div>
   </div>
 
@@ -43,9 +46,7 @@
                     <i class="fa fa-rocket"></i>
                     {{{title}}}
                 </h3>
-                <p>
-                    {{{body}}}
-                </p>
+                <div ui-view></div>
             </div>
         </div>
     </div>
