@@ -424,6 +424,7 @@ input:focus, textarea:focus {
 .social-icon.medium { background-image: url("../images/icons/medium.png"); }
 .social-icon.behance { background-image: url("../images/icons/behance.png"); }
 .social-icon.quora { background-image: url("../images/icons/quora.png"); }
+.social-icon.stack { background-image: url("../images/icons/stackoverflow.png"); }
 
 
 /*--------------SAVE FOR LATER------------------ */

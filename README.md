@@ -9,4 +9,4 @@ Technology used:
 *  <strong> AngularJS </strong>
 *  <strong>Node js</strong>
 
-my portfolio site [here](https://ladanazita.com)
+my portfolio site [here](www.ladanazita.com)
