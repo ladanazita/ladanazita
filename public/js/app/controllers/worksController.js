@@ -5,21 +5,26 @@
     .module('app')
     .controller('WorksController', WorksController);
 
-    WorksController.$inject = ['$scope','$http'];
+    WorksController.$inject = ['$scope','dataFactory'];
 
-    function WorksController($scope, $http){
+    function WorksController($scope, dataFactory){
       console.log('controller loaded');
-      $scope.works=[];
+      var vm =this;
 
-      $http.get('/api/v1/works')
-        .then(function(result){
-          $scope.works = result.data
-      },
-      function(reason){
-        console.log(reason);
-      })
-      .catch(function(err){
-        console.log(err);
-      });
+      $scope.status;
+      $scope.works;
+
+      getData();
+
+      function getData(){
+        dataFactory.getData()
+        .success(function(data){
+          $scope.works = data;
+        })
+        .error(function(error){
+          $scope.status = "Unable to load project data: "+ error.message;
+        });
+      }
+
     }
   }());
