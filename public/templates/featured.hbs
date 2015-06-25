@@ -1,11 +1,14 @@
-<h2> What I have been up to:</h2>
-<strong ng-show="!vm.works"> Loading...</strong>
-<div ng-repeat="work in works.works | filter:{featured:true} | orderBy:'date':true">
-  <a ng-href="{{work.link.href}}" title="{{work.link.value}}" target="_blank" class="work">
-    <img class="icon" ng-src="images/{{work.image}}" alt="{{work.title}}"/>
-    <p class="title">{{work.title}}</p>
-    <p class="category">{{work.category}}</p>
-    <p class="date">{{work.date}}</p>
-    <p class="description">{{work.description}}</p>
-  </a>
-</div>
+<div class="content">
+  <strong ng-show="!works.works"> Loading...</strong>
+    <div ng-repeat="work in works.works | filter:{featured:true} | orderBy:'date':true">
+      <div class="work">
+        <a ng-href="{{work.link.href}}" title="{{work.link.value}}" target="_blank">
+          <img class="icon" ng-src="images/{{work.image}}" alt="{{work.title}}"/>
+        </a>
+        <p class="title">{{work.title}}</p>
+        <p class="category">{{work.category}}</p>
+        <p class="date">{{work.date}}</p>
+        <p class="description">{{work.description}}</p>
+      </div>
+    </div>
+  </div>
