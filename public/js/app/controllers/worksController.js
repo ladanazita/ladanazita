@@ -10,7 +10,7 @@
     function WorksController($scope, dataFactory){
       console.log('controller loaded');
       var vm =this;
-
+      console.log(dataFactory);
       $scope.status;
       $scope.works;
 
@@ -19,7 +19,8 @@
       function getData(){
         dataFactory.getData()
         .success(function(data){
-          $scope.works = data;
+          vm.works = data;
+          console.log(data);
         })
         .error(function(error){
           $scope.status = "Unable to load project data: "+ error.message;

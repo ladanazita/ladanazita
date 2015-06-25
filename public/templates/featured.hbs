@@ -2,7 +2,7 @@
 <strong ng-show="!vm.works"> Loading...</strong>
 <div ng-repeat="work in works.works | filter:{featured:true} | orderBy:'date':true">
   <a ng-href="{{work.link.href}}" title="{{work.link.value}}" target="_blank" class="work">
-    <img class="icon" ng-src="img/icons/{{work.image}}" alt="{{work.title}}"/>
+    <img class="icon" ng-src="images/{{work.image}}" alt="{{work.title}}"/>
     <p class="title">{{work.title}}</p>
     <p class="category">{{work.category}}</p>
     <p class="date">{{work.date}}</p>

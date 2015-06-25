@@ -40,7 +40,7 @@
 },
 {
   "id":"tamagochi",
-  "image":"",
+  "image":"tama.jpeg",
   "featured":true,
   "completion": "working on it",
   "type": "javascript",
