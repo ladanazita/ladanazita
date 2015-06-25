@@ -5,17 +5,5 @@ var router = express.Router();
 router.get('/', function(req, res) {
   res.render('/views/index.hbs');
 });
-// router.get('/about', function(req, res) {
-//   res.render('about');
-// });
-// router.get('/contact', function(req, res) {
-//   res.render('contact');
-// });
-// router.get('/featured', function(req, res) {
-//   res.render('featured');
-// });
-// router.get('/links', function(req, res) {
-//   res.render('links');
-// });
 
 module.exports = router;

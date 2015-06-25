@@ -9,13 +9,11 @@
 
     function WorksController($scope, $http){
       console.log('controller loaded');
-      var vm =this;
-
       $scope.works=[];
 
       $http.get('/api/v1/works')
         .then(function(result){
-          vm.works = result.data
+          $scope.works = result.data
       },
       function(reason){
         console.log(reason);

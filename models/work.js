@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-var workService = require('../services/work-service');
+// var Schema = mongoose.Schema;
+// var workService = require('../services/work-service');
 
-var workSchema = new Schema({
+var workSchema = {
   id: String,
   image: String,
   featured: Boolean,
@@ -14,7 +14,7 @@ var workSchema = new Schema({
   date: Number,
   description: String,
   link: {href: String, value: String}
-});
+};
 
 // workSchema.path('id').validate(function(value, next){
 //   workService.findWork(value, function(err, work){
@@ -28,8 +28,6 @@ var workSchema = new Schema({
 //   });
 // }, "That project already exists");
 
-var Work = mongoose.model('Work', workSchema);
+module.exports = mongoose.model('Work', workSchema);
 
-module.exports = {
-  Work : Work
-};
+// module.exports = { Work : Work };
