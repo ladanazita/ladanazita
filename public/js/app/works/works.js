@@ -13,9 +13,9 @@
 
       $scope.works=[];
 
-      $http.get('/seeds/data')
-      .then(function(response){
-        vm.works = result.data
+      $http.get('/api/v1/works')
+        .then(function(result){
+          vm.works = result.data
       },
       function(reason){
         console.log(reason);

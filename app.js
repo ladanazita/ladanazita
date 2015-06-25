@@ -6,8 +6,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
+// SPA
 var config = require('./config');
 var routes = require('./routes/index');
+// API route
 var works = require('./routes/api/v1/works.js');
 
 var mongoDB = mongoose.connect(process.env.MONGOLAB_URI).connection;

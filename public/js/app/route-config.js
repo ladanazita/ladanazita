@@ -1,5 +1,5 @@
 (function(){
-  'user strict';
+  'use strict';
 
   angular
     .module('app')
@@ -32,7 +32,7 @@
         title:'talk to me',
         templateUrl : 'templates/contact.hbs'
     });
-      $urlRouterProvider.otherwise("/home");
+      // $urlRouterProvider.otherwise("/home");
   }
 })();
 

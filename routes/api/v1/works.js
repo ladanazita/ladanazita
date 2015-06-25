@@ -3,6 +3,14 @@ var router = express.Router();
 var work = require('../../../models/work');
 // var workService = require('../../../services/work-service');
 
+// GET work listings
+// router.get('/create', function(req,res,next){
+//   var vm={
+//     title: "Add a project"
+//   };
+//   res.render('works/index', vm);
+// });
+
 // GET
 router.get('/api/v1/works', function (req, res, next){
   work.find(function (err, data){
@@ -40,4 +48,12 @@ router.get('/api/v1/works', function (req, res, next){
 //   });
 // });
 
+// router.get('/featured', function(req, res, next) {
+//   workService.findWork(function(err, works) {
+//     if (err) {
+//       return res.status(500).json({error: 'Failed to retrieve works'});
+//     }
+//     res.json(works);
+//   });
+// });
 module.exports = router;
