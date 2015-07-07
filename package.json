@@ -13,6 +13,8 @@
     "express": "~4.12.4",
     "hbs": "~2.9.0",
     "mongoose": "^4.0.5",
-    "morgan": "~1.5.3"
+    "morgan": "~1.5.3",
+    "nodemailer-direct-transport": "^1.0.2",
+    "nodemailer-express-handlebars": "^1.0.0"
   }
 }

@@ -30,9 +30,11 @@
       .state('contact',{
         url:'/contact',
         title:'talk to me',
-        templateUrl : 'templates/contact.hbs'
+        templateUrl : 'templates/contact.hbs',
+        controller : 'contactController',
+        controllerAs: 'contact'
     });
-      // $urlRouterProvider.otherwise("/home");
+      $urlRouterProvider.otherwise("/home");
   }
 })();
 

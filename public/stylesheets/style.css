@@ -144,6 +144,9 @@ a.pure-button-primary {
 }
 
 /* ---- CONTENT STYLES ---*/
+.content{
+  position: relative;
+}
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
@@ -463,7 +466,7 @@ input:focus, textarea:focus {
   padding : 10px;
   width : 25%;
   height: 25%;
-  /*float : left;*/
+  float : left;
 }
 
 .work:hover {
