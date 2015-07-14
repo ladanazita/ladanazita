@@ -16,7 +16,8 @@
   <script src="/bower/angular/angular.js"></script>
   <script src="/bower/ui-router/release/angular-ui-router.js"></script>
   <script src="/bower/angular-resource/angular-resource.js"></script>
-  <script src="/js/jquery.js"></script>
+  <script src="/bower/jquery/dist/jquery.js"></script>
+  <script src="/js/click.js"></script>
 
   {{!-- JS --}}
   <script src="/js/app/app.js"></script>
@@ -25,7 +26,7 @@
   <script src="/js/app/controllers/contactController.js"></script>
   <script src="/js/factories/factory.js"></script>
   {{!-- // <script src="/js/app/controllers/portfolioController.js"></script> --}}
-  <script src="/js/filters.js"></script>
+  {{!-- // <script src="/js/filters.js"></script> --}}
 
 
 </head>
@@ -36,9 +37,10 @@
     <div class="splash">
       <h1 class="splash-head">Ladan Azita Nasserian</h1>
       <ul class ="splash-subhead">
-        <li><a ui-sref="about">About Me</a></li>
-        <li><a ui-sref="featured">Featured Projects</a></li>
-        <li><a ui-sref="contact">Contact</a></li>
+        <li class="click"><a ui-sref="about">About Me</a></li>
+        <li class="click"><a ui-sref="featured">Featured Projects</a></li>
+        <li class="click"><a ui-sref="contact">Contact</a></li>
+        {{!-- <li id="click"><a ui-sref="resume">Resume</a></li> --}}
       </ul>
     </div>
   </div>
@@ -53,27 +55,27 @@
                     <i class="fa fa-rocket"></i>
                     {{{title}}}
                 </h3>
-                <div ui-view></div>
+                <div id="clicked" ui-view></div>
             </div>
         </div>
     </div>
     {{!-- SOCIAL --}}
     <div class="ribbon l-box-lrg pure-g">
       <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
-        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+        {{!-- <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5"> --}}
           <h2 class="content-head content-head-ribbon">Find me on:</h2>
-          <ul class= "social">
-            <li><a href="http://twitter.com/ladanazita" class="social-icon twitter">Twitter</a></li>
-            <li><a href="http://iazt.tumblr.com/" class="social-icon tumblr">Tumblr</a></li>
-            <li><a href="https://www.linkedin.com/in/ladanazita" class="social-icon linkedin">LinkedIn</a></li>
-            <li><a href="http://github.com/ladanazita" class="social-icon github">github</a></li>
-            <li><a href="https://www.youtube.com/user/ladandandan" class="social-icon youtube">You Tube</a></li>
-            <li><a href="http://artsy.net/ladan-nasserian" class="social-icon artsy">Artsy</a></li>
-            <li><a href="http://behance.net/ladanazita" class="social-icon behance">Behance</a></li>
-            <li><a href="http://quora.com/Ladan-Azita" class="social-icon quora">Quora Digest</a></li>
-            <li><a href="http://careers.stackoverflow.com/ladanazita" class="social-icon stack">Stack Overflow</a></li>
-          </ul>
-        </div>
+            <ul class= "social">
+              <li><a href="http://twitter.com/ladanazita" class="social-icon twitter">Twitter</a></li>
+              <li><a href="http://iazt.tumblr.com/" class="social-icon tumblr">Tumblr</a></li>
+              <li><a href="https://www.linkedin.com/in/ladanazita" class="social-icon linkedin">LinkedIn</a></li>
+              <li><a href="http://github.com/ladanazita" class="social-icon github">github</a></li>
+              <li><a href="https://www.youtube.com/user/ladandandan" class="social-icon youtube">You Tube</a></li>
+              <li><a href="http://artsy.net/ladan-nasserian" class="social-icon artsy">Artsy</a></li>
+              <li><a href="http://behance.net/ladanazita" class="social-icon behance">Behance</a></li>
+              <li><a href="http://quora.com/Ladan-Azita" class="social-icon quora">Quora Digest</a></li>
+              <li><a href="http://careers.stackoverflow.com/ladanazita" class="social-icon stack">Stack Overflow</a></li>
+            </ul>
+        {{!-- </div> --}}
       </div>
     </div>
     {{!-- SOURCE CODE / FOOTER --}}

@@ -76,6 +76,7 @@ a:visited {
 a:hover {
     color: white;
     text-decoration: none;
+    cursor:pointer;
 }
 
 /* selected link */
@@ -142,6 +143,7 @@ a.pure-button-primary {
     border-radius: 5px;
     font-size: 120%;
 }
+
 
 /* ---- CONTENT STYLES ---*/
 .content{
@@ -382,7 +384,10 @@ input:focus, textarea:focus {
 
 .l-box-lrg {
     padding: 2em;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.l-box-md {
+  padding: 1em;
 }
 
 .is-center {
@@ -466,7 +471,7 @@ input:focus, textarea:focus {
   padding : 10px;
   width : 25%;
   height: 25%;
-  float : left;
+  display: inline-block;
 }
 
 .work:hover {
@@ -491,6 +496,7 @@ input:focus, textarea:focus {
 }
 .work .description {
   font-size : 0.9em;
+
 }
 .work .category {
   display:none;
